@@ -46,20 +46,3 @@ def listar_productos():
             print(f"Producto : {nombre}")
             print(f"Precio : {precio}")
             print(f"Cantidad : {cantidad}")
-
-def eliminar_producto():
-
-    productos = leer_archivo(ruta_inventario)
-
-    if not productos:
-        print("No hay productos.")
-        return
-
-    nombre = input("Ingrese el nombre del producto a eliminar: ")
-
-    if nombre in productos:
-        del productos[nombre]
-        guardar_archivo(ruta_inventario, productos)
-        print("Producto eliminado correctamente.")
-    else:
-        print("El producto no existe.")
