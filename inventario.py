@@ -1,4 +1,4 @@
-
+from json import load, dumps
 
 ruta_inventario = "inventario.json"
 
@@ -46,5 +46,3 @@ def listar_productos():
             print(f"Producto : {nombre}")
             print(f"Precio : {precio}")
             print(f"Cantidad : {cantidad}")
-
-print("ERROR EN INVENTARIO")
